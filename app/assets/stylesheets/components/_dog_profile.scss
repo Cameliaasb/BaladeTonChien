@@ -1,39 +1,12 @@
-.positive {
-  color:green;
-}
-
-.negative {
-  color: rgb(176, 57, 57);
-}
-
-.bulles {
+.bubbles {
   text-align: center;
   margin: 8%;
   color: white;
-  p {
-    margin:0;
-    line-height: 1.8rem;
-
-  }
-  strong {
-    color:white;
-  }
 }
 
-
-.description-mydog {
-  background-color: white;
+.dog-description {
+  box-shadow: $shadow;
   padding: 8%;
-  margin: 20px;
+  margin: 10%;
   border-radius: 30px;
-  font-family: 'Outfit', sans-serif;
-
-  p {
-    margin: 0;
-    line-height: 1.8rem;
-
-  }
-  strong {
-    margin-top: 4px;
-  }
 }

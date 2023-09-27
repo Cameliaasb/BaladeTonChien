@@ -2,7 +2,7 @@
   <div class="">
     <div class="">
 
-      <div class="bulles">
+      <div class="bubbles">
         <%= link_to destroy_user_session_path, data:{turbo_method: :delete} do %>
           <%= cl_image_tag @dog.photo.key, class:"avatar-large"%>
         <% end %>
@@ -11,7 +11,7 @@
         <p><i class="fa-solid fa-venus-mars"></i>  <%= @dog.sexe %> de <%= "#{@dog.age} #{@dog.age > 1 ? "ans" : "an"}"  %> </p>
       </div>
 
-      <div class="description-mydog">
+      <div class="dog-description bg-white">
         <p><strong>Activité :  </strong> </p>
           <% if @dog.energy > 3 %>
           <%# filtre balade : difficulté %>

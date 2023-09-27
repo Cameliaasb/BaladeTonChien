@@ -1,14 +1,11 @@
-// Define variables for your color scheme
-
-// For example:
-$red: #FD1015;
+$red: rgb(176, 57, 57);
 $blue: #0D6EFD;
 $yellow: #FFC65A;
 $orange: #E67E22;
-$green: #1EDD88;
+$green: #1a905b;
 $gray: #0E0000;
-$light-gray: #F4F4F4;
+$light-gray: #e1e1e1;
 
-// custom color
 $main: #116D6E;
 $background: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
+$shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);

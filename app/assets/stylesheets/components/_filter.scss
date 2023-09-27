@@ -1,5 +1,4 @@
 .filters {
-  z-index: 2;
   position: fixed;
   bottom: 70px;
   left: 50%;
@@ -10,44 +9,28 @@
   gap: 0.8rem;
   overflow: scroll;
   transform: translateX(-50%);
-  // height: 5rem;
-}
-
-.filter-img {
-  z-index: 2;
-  position: fixed;
-  bottom: 75px;
-  right: 0;
-}
-
-.cross {
-  z-index: 2;
-  bottom: 55px;
-  right: 10px;
 }
 
 .filter-icon {
   height: fit-content;
-  background-color: rgb(176, 57, 57);
+  background-color: $red;
   color: white;
-  text-decoration: none;
   border-radius: 40px;
-  border: 1px solid  rgb(176, 57, 57);
+  border: 1px solid  $red;
   padding: 8px 16px;
-  white-space: nowrap;
 }
 
 .filter-link {
   height: fit-content;
-  color: rgb(176, 57, 57);
+  color: $red;
   text-decoration: none;
   border-radius: 40px;
-  border: 1px solid  rgb(176, 57, 57);
+  border: 1px solid  $red;
   padding: 8px 16px;
   white-space: nowrap;
+
   &.active {
-    background-color:  rgb(176, 57, 57);
+    background-color:  $red;
     color: white;
   }
-  // #116D6E
 }
