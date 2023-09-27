@@ -1,12 +1,11 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,800&family=Outfit:wght@400;700&family=Oxygen:wght@300;400;700&family=Play:wght@400;700&display=swap');
 
 
 // Define fonts for body and headers
 $body-font: 'Outfit', sans-serif;
-$headers-font: 'Play', sans-serif;
+$headers-font: 'Outfit', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -17,7 +16,3 @@ $headers-font: 'Play', sans-serif;
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
-
-//   // font-family: 'Nunito Sans', sans-serif;
-//     font-family: 'Outfit', sans-serif;
-// // font-family: 'Oxygen', sans-serif;
