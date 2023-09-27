@@ -38,7 +38,7 @@
   </div>
 
   <div class="boubou">
-    <%= link_to(my_dog_path, class:"text-decoration-none action-btn") do %>
+    <%= link_to(dog_walks_path(current_user.dog), class:"text-decoration-none action-btn") do %>
     On y va ?
     <% end %>
   </div>
