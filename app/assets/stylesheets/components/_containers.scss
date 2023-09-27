@@ -1,0 +1,47 @@
+.app-container {
+  width: 100vw;
+  margin-bottom: 70px;
+  background-image: $background;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+// Need to check if necessary
+.match-container {
+  animation: pop .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 4;
+  width: 100vw;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+// dog in homepage
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66vh;
+}
+
+// chatroom
+.message-container {
+  height: calc(100vh - 70px);
+  width: 100%;
+  overflow: scroll;
+  background-color: white;
+}

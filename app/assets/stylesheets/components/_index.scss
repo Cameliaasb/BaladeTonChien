@@ -1,19 +1,16 @@
 // Import your components CSS files here.
 @import "alert";
 @import "animation";
-@import "app_container";
 @import "avatar";
 @import "buttons";
+@import "containers";
 @import "dog_profile";
 @import "form_legend_clear";
 @import "navbar";
 @import "home_page";
-@import "container";
 @import "footer";
 @import "search";
-@import "form_new_dog";
 @import "map";
-@import "card_product";
 @import "swipe_page";
 @import "walk_show";
 @import "tindog";
@@ -24,3 +21,5 @@
 @import "winmatch_page";
 @import "filter";
 @import "match_card";
+
+@import "info_window";

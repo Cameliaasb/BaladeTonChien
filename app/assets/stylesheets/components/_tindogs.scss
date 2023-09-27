@@ -137,32 +137,25 @@
   color: #CDD6DD;
 }
 
-.center-everythings {
+.center-everything {
   height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5% 5%;
-  font-family: 'Outfit', sans-serif;
+  padding: 5%;
   z-index: 3;
   justify-content: space-around;
-  background: linear-gradient(
-    #ffffff 35%,
-    white 35% 60%,
-    white 60% 80%,
-    white 80%);
+  background-color: white;
 
   h3 {
-  font-size: 32px;
-  color: black;
-  font-weight: bold;
-  font-family: 'Play', sans-serif;
-  margin-top: 0%;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    margin-top: 0%;
   }
   p {
     margin: 0;
     line-height: 1.8rem;
-
   }
 }
 

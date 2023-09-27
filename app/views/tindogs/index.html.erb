@@ -1,4 +1,4 @@
-<div class="app_container tindog-background">
+<div class="app-container">
   <div class="tinder" data-controller="tindogs">
 
     <div class="tinder--status">
@@ -9,7 +9,7 @@
     <div class="tinder--cards">
       <% @dogs.each do |dog| %>
         <div class="tinder--card" data-tindogs-target="card" data-receiver-id="<%= dog.id %>">
-          <div class="center-everythings">
+          <div class="center-everything">
 
               <div class="tindog-title">
                 <%= cl_image_tag dog.photo.key, class:"avatar-large" %>

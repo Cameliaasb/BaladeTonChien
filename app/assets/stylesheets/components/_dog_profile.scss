@@ -23,10 +23,11 @@
 
 .description-mydog {
   background-color: white;
-  width: 100%;
   padding: 8%;
+  margin: 20px;
   border-radius: 30px;
   font-family: 'Outfit', sans-serif;
+
   p {
     margin: 0;
     line-height: 1.8rem;
@@ -34,42 +35,5 @@
   }
   strong {
     margin-top: 4px;
-  }
-}
-
-
-
-
-.dog-avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border: white 2px solid;
-}
-
-.my-dog-background {
-  background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.center-everything {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20% 10%;
-  font-family: 'Outfit', sans-serif;
-  z-index: 3;
-  justify-content: space-around;
-
-  h2 {
-  font-size: 32px;
-  color: white;
-  font-weight: bold;
-  font-family: 'Play', sans-serif;
   }
 }

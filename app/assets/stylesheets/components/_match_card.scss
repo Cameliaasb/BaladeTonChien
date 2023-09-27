@@ -1,16 +1,9 @@
-.message-container {
-  height: fit-content;
-  max-height: calc(100vh - 70px);
-  width: 100%;
-  overflow: scroll;
-  background-color: white;
-
-  h1 {
+.message-container h1 {
     border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
     padding: 1rem;
   }
-}
+
 
 .message-card {
   border-bottom: 0.8px solid #116D6E;
@@ -22,7 +15,6 @@
     display: flex;
     gap: 4%;
     align-items: center;
-
   }
 
   p {
