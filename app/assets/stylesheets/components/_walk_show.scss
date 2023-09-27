@@ -31,31 +31,8 @@
   margin-top: 16px
 }
 
-strong {
-  color: #116D6E;
-  margin-right: 8px;
-}
-
 
 .walk-description > p {
   text-align: left;
   margin: 16px 0px;
-  line-height: 1.8rem;
-}
-
-
-.return-btn {
-  z-index: 50;
-  padding: 8px;
-  position: fixed;
-  text-align:center;
-  justify-content: center;
-  color: black;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 50%;
-  left: 20px;
-  top: 20px;
-  width: 40px;
-  height: 40px;
 }

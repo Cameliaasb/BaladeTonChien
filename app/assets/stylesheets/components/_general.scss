@@ -3,6 +3,11 @@ p {
   line-height: 1.8rem;
 }
 
+strong {
+  color: $main;
+  margin-right: 8px;
+}
+
 .positive {
   color: $green;
 }

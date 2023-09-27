@@ -33,9 +33,11 @@
 // dog in homepage
 .center-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 66vh;
+  flex-direction: column;
+
 }
 
 // chatroom

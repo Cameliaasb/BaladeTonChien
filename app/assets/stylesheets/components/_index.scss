@@ -5,22 +5,21 @@
 @import "buttons";
 @import "containers";
 @import "dog_profile";
-@import "filter";
-@import "form_legend_clear";
-@import "navbar";
-@import "home_page";
+@import "filters";
 @import "footer";
-@import "search";
+@import "form_legend_clear";
+@import "general";
+@import "info_window";
+
+// to declutter
 @import "map";
+@import "navbar";
+@import "search";
 @import "swipe_page";
 @import "walk_show";
 @import "tindog";
-@import "heart";
 @import "tindogs";
 @import "match";
 @import "message";
 @import "winmatch_page";
 @import "match_card";
-
-@import "info_window";
-@import "general";
