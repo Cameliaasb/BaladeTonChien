@@ -7,8 +7,9 @@
 }
 
 .tindog-background {
-  background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
+  background-image: $background;
 }
+
 .match-container {
   animation: pop .3s;
   position: fixed;

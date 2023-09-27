@@ -1,0 +1,17 @@
+.action-btn {
+  background: (white);
+  text-decoration: none;
+  border-radius: 30px;
+  color:black;
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+  padding: 30px;
+  // margin: 80px;
+  width: fit-content;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  z-index: 50;
+}
