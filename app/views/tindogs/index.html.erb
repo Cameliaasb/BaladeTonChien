@@ -21,39 +21,7 @@
 
 
               <div class="description-tindog">
-                <p><strong>Activité :  </strong> </p>
-                    <% if dog.energy > 3 %>
-                      <p> <i class="fa-solid fa-circle-check positive"></i> Balades dynamiques  </p>
-                    <% else %>
-                      <p><i class="fa-solid fa-circle-xmark negative"></i> Balades dynamiques </p>
-                    <% end %>
-
-                    <% if dog.size == "Moyen" || dog.size == "Grand"%>
-                      <p> <i class="fa-solid fa-circle-check positive"></i> Longues distances </p>
-                    <% else %>
-                      <p><i class="fa-solid fa-circle-xmark negative"></i> Longues distances </p>
-                    <% end %>
-                <p><strong>Ententes :  </strong> </p>
-
-                  <% if dog.good_with_others_dogs > 3 %>
-                    <p> <i class="fa-solid fa-circle-check positive"></i> Mâles et femelles </p>
-                  <% else %>
-                    <p><i class="fa-solid fa-circle-xmark negative"></i> Chiens non stérilisés  </p>
-                  <% end %>
-
-                  <% if dog.good_with_strangers > 3 %>
-                    <p> <i class="fa-solid fa-circle-check positive"></i> Inconnus </p>
-                  <% else %>
-                    <p><i class="fa-solid fa-circle-xmark negative"></i> Inconnus </p>
-                  <% end %>
-
-                  <% if dog.good_with_chidren > 3 %>
-                    <p> <i class="fa-solid fa-circle-check positive"></i> Petits et grands chiens </p>
-                  <% else %>
-                    <p><i class="fa-solid fa-circle-xmark negative"></i> Chiens de petite taille </p>
-                  <% end %>
-
-
+                <%= render "shared/dog_description", locals : {dog: dog} %>
               </div>
 
 

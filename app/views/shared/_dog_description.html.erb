@@ -1,0 +1,38 @@
+<p><strong>Activité :  </strong> </p>
+<% case dog.energy %>
+<% when 1 %>
+<%# filtre balade : difficulté %>
+  <p> <i class="fa-solid fa-circle-check positive"></i> Balades peu dynamiques </p>
+<% when 2 %>
+  <p><i class="fa-solid fa-circle-xmark positive"></i> Balades assez dynamiques </p>
+<% when 3 %>
+  <p><i class="fa-solid fa-circle-xmark positive"></i> Balades dynamiques </p>
+<% end %>
+
+<p><strong>Ententes :  </strong> </p>
+<div class="description-block">
+
+  <% if dog.neutered_males && dog.neutered_females %>
+    <p> <i class="fa-solid fa-circle-check positive"></i> Les chiens stérilisés </p>
+  <% elsif dog.neutered_females %>
+    <p><i class="fa-solid fa-circle-xmark negative"></i> Mâles stérilisés  </p>
+  <% elsif dog.neutered_males %>
+    <p><i class="fa-solid fa-circle-xmark negative"></i> Femelles stérilisées  </p>
+  <% end %>
+
+  <% if dog.unneutered_males && dog.unneutered_females %>
+    <p> <i class="fa-solid fa-circle-check positive"></i> Les chiens non stérilisés </p>
+  <% elsif dog.unneutered_females %>
+    <p><i class="fa-solid fa-circle-xmark negative"></i> Mâles non stérilisés  </p>
+  <% elsif dog.unneutered_males %>
+    <p><i class="fa-solid fa-circle-xmark negative"></i> Femelles non stérilisées  </p>
+  <% end %>
+
+  <% if dog.small_dogs && dog.big_dogs %>
+    <p> <i class="fa-solid fa-circle-check positive"></i> Les chiens de toutes tailles </p>
+  <% elsif dog.big_dogs %>
+    <p><i class="fa-solid fa-circle-xmark negative"></i> Chiens de petite taille  </p>
+  <% elsif dog.small_dogs %>
+    <p><i class="fa-solid fa-circle-xmark negative"></i> Chiens de grande taille   </p>
+  <% end %>
+</div>
