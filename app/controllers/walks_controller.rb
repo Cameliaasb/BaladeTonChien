@@ -36,38 +36,6 @@ class WalksController < ApplicationController
         marker_html: render_to_string(partial: "marker")
       }
     end
-
-    # if params[:difficulty].present?
-    #   respond_to do |format|
-    #     format.json { render json: @markers }
-    #   end
-    #   # @markers = @walks.map do |walk|
-    #   #   {
-    #   #     lat: walk.lat,
-    #   #     lng: walk.lng
-    #   #   }
-    #   # end
-    # end
-
-    # if params[:duration].present?
-    #   respond_to do |format|
-    #     format.json { render json: @markers }
-    #   end
-    # end
-
-    # si on veut que le current user
-
-    # si on veut tout les users
-
-    # @users = User.all
-    # @users.geocoded.map do |user|
-    #   @markers << {
-    #     lat: user.latitude,
-    #     lng: user.longitude,
-    #     # info_window_html: render_to_string(partial: "info_window_user", locals: { user: user }),
-    #     marker_html: render_to_string(partial: "marker_user")
-    #   }
-    # end
   end
 
   def show

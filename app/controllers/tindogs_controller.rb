@@ -1,5 +1,4 @@
 class TindogsController < ApplicationController
-
   def index
 
     tindogs_ids = current_user.dog.tindogs.pluck(:receiver_id)
@@ -37,18 +36,18 @@ class TindogsController < ApplicationController
     ).any?
   end
 
-  def dogs_to_swipe
-    # récupère tout les ids de chiens
-    dogs_id = Dog.all.to_a.map(&:id)
-    # supprime l'id de ton chien
-    dogs_id.delete(current_user.dog.id)
-    # supprime l'id de tout les chiens que t'as déjà swipé positif (pending et match)
-    Tindog.all.each do |tindog|
-      dogs_id.delete(tindog.receiver_id) if tindog.sender_id == current_user.dog.id
-    end
+  # def dogs_to_swipe
+  #   # récupère tout les ids de chiens
+  #   dogs_id = Dog.all.to_a.map(&:id)
+  #   # supprime l'id de ton chien
+  #   dogs_id.delete(current_user.dog.id)
+  #   # supprime l'id de tout les chiens que t'as déjà swipé positif (pending et match)
+  #   Tindog.all.each do |tindog|
+  #     dogs_id.delete(tindog.receiver_id) if tindog.sender_id == current_user.dog.id
+  #   end
 
-    return dogs_id
-  end
+  #   return dogs_id
+  # end
 
   private
 

@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import mapboxgl from 'mapbox-gl' // Don't forget this!
+import mapboxgl from 'mapbox-gl'
 
 export default class extends Controller {
   static targets = ["map"]
@@ -51,75 +51,6 @@ export default class extends Controller {
         });
       });
     }
-
-  //   this.map.on('load', () => {
-  //     this.map.addSource('contours', {
-  //       type: 'vector',
-  //       url: 'mapbox://cameliaasb.anhs7m1u'
-  //     });
-  //     this.map.addLayer({
-  //       'id': 'cameliaasb.anhs7m1u',
-  //       'type': 'fill',
-  //       'source': 'cameliaasb.anhs7m1u',
-  //       // 'source-layer': 'cameliaasb.anhs7m1u',
-  //       'layout': {
-  //       // // Make the layer visible by default.
-  //       'visibility': 'visible',
-  //       // 'line-join': 'round',
-  //       // 'line-cap': 'round'
-  //       },
-  //       // 'paint': {
-  //       // 'line-color': '#877b59',
-  //       // 'line-width': 2
-  //       // }
-  //     });
-  //   });
-
-  //   this.map.on('idle', () => {
-  //     // If these two layers were not added to the map, abort
-  //     // if (!this.map.getLayer('contours')) {
-  //     //   return;
-  //     // }
-
-  //     // Enumerate ids of the layers.
-  //     const toggleableLayerIds = ['contours'];
-
-  //     // Set up the corresponding toggle button for each layer.
-  //     for (const id of toggleableLayerIds) {
-  //       const link = document.getElementById(id)
-  //       console.log(link)
-
-  //       // Show or hide layer when the toggle is clicked.
-  //       link.onclick = function (e) {
-  //         console.log(e.currentTarget);
-
-  //         const clickedLayer = id;
-  //         e.preventDefault();
-  //         e.stopPropagation();
-
-  //         const visibility = this.map.getLayoutProperty(
-  //           clickedLayer,
-  //           'visibility'
-  //         );
-
-  //       // Toggle layer visibility by changing the layout object's visibility property.
-  //         if (visibility === 'visible') {
-  //           this.map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-  //           this.className = '';
-  //         } else {
-  //           this.className = 'active';
-  //           this.map.setLayoutProperty(
-  //             clickedLayer,
-  //             'visibility',
-  //             'visible'
-  //           );
-  //         }
-  //       };
-
-  //       const layers = document.getElementById('menu');
-  //       layers.appendChild(link);
-  //     }
-  //   });
   }
 
 
@@ -166,31 +97,4 @@ export default class extends Controller {
     }
   }
 
-  // updateMarkers(event) {
-  //   console.log("update markers")
-  //   console.log(event.currentTarget.dataset.type);
-  //   console.log(event.currentTarget.dataset.value);
-  //   // récupérer la valeur du nouveau filtre
-
-  //   // fetch vers l'index de walks avec le filter, récuperer en json les markers
-  //   const url = `/dogs/29/walks?${event.currentTarget.dataset.type}=${event.currentTarget.dataset.value}`
-
-  //   fetch(url)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       // data.forEach(marker)
-
-  //       console.log(data);
-  //     })
-
-
-
-
-  // }
-
-
-
-
-    // mettre à jour la map avec les markers
-    // this.map.markers
 }

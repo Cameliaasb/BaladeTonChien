@@ -24,9 +24,8 @@ class DogsController < ApplicationController
 
   def dog_params
     params.require(:dog).permit(
-      :name, :breed, :age, :energy, :playfulness, :good_with_strangers,
-      :good_with_others_dogs, :good_with_chidren, :size, :neutered,
-      :good_with_water, :shadow_level, :sexe, :photo
+      :name, :breed, :age, :energy, :neutered_males, :neutered_females, :size,
+      :neutered, :sexe, :photo, :unneutered_females, :unneutered_males
     )
   end
 end
