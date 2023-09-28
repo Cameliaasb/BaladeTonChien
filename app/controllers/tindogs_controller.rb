@@ -4,7 +4,7 @@ class TindogsController < ApplicationController
 
     tindogs_ids = current_user.dog.tindogs.pluck(:receiver_id)
     @dogs = Dog.where.not(id: tindogs_ids.push(current_user.dog.id))
-    @dog = Dog.find(current_user.dog.id)
+    @mydog = Dog.find(current_user.dog.id)
     # la suite n'est plus appelée
     # if dogs_to_swipe.empty?
     #  redirect_to no_swipe_path

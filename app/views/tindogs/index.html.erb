@@ -11,35 +11,33 @@
         <div class="tinder--card" data-tindogs-target="card" data-receiver-id="<%= dog.id %>">
           <div class="center-everything">
 
-              <div class="tindog-title">
-                <%= cl_image_tag dog.photo.key, class:"avatar-large" %>
-                <h3> <%= dog.name %> </h2>
-                <p><%= dog.breed %>  </p>
-                <p><i class="fa-solid fa-venus-mars"></i>  <%= "#{dog.sexe} #{dog.neutered ? (dog.sexe == "Femelle" ? "stérilisée": "stérilisé") : (dog.sexe == "Femelle" ? "non stérilisée": "non stérilisé")} de  #{dog.age} #{dog.age > 1 ? "ans" : "an"}" %>  </p>
-              </div>
+            <div class="tindog-title">
+              <%= cl_image_tag dog.photo.key, class:"avatar-large" %>
+              <h3> <%= dog.name %> </h2>
+              <p><%= dog.breed %>  </p>
+              <p><i class="fa-solid fa-venus-mars"></i>  <%= "#{dog.sexe} #{dog.neutered ? (dog.sexe == "Femelle" ? "stérilisée": "stérilisé") : (dog.sexe == "Femelle" ? "non stérilisée": "non stérilisé")} de  #{dog.age} #{dog.age > 1 ? "ans" : "an"}" %>  </p>
+            </div>
 
 
-
-              <div class="description-tindog">
-                <%= render "shared/dog_description", locals : {dog: dog} %>
-              </div>
-
+            <div class="description-tindog">
+              <%= render "shared/dog_description", locals : {dog: dog} %>
+            </div>
 
 
-              <strong> <p> ⚡️ Compatibilité : <%= [
-                  @dog.good_with_others_dogs > 3 || dog.neutered,
-                  @dog.good_with_chidren > 3 || (dog.size != "Petit"),
-                  (@dog.energy > 3 && dog.energy > 3) || (@dog.energy <= 3 && dog.energy <= 3),
-                  dog.good_with_others_dogs > 3 || @dog.neutered,
-                  dog.good_with_others_dogs > 3 || @dog.neutered,
-                  dog.good_with_chidren > 3 || (@dog.size != "Petit"),
-                  dog.good_with_chidren > 3 || (@dog.size != "Petit"),
-                  (dog.good_with_strangers > 3 && @dog.good_with_strangers > 3) || (dog.good_with_strangers <= 3 && @dog.good_with_strangers),
-                  (dog.size != "Petit" && @dog.size != "Petit") || (dog.size == @dog.size),
-                  (dog.size != "Petit" && @dog.size != "Petit") || (dog.size == @dog.size)
-                  ].count(true) * 10
-                  %>% ⚡️
-              </p> </strong>
+            <strong> <p> ⚡️ Compatibilité : <%= [
+                @mydog.good_with_others_dogs > 3 || dog.neutered,
+                @mydog.good_with_chidren > 3 || (dog.size != "Petit"),
+                (@mydog.energy > 3 && dog.energy > 3) || (@mydog.energy <= 3 && dog.energy <= 3),
+                dog.good_with_others_dogs > 3 || @mydog.neutered,
+                dog.good_with_others_dogs > 3 || @mydog.neutered,
+                dog.good_with_chidren > 3 || (@mydog.size != "Petit"),
+                dog.good_with_chidren > 3 || (@mydog.size != "Petit"),
+                (dog.good_with_strangers > 3 && @mydog.good_with_strangers > 3) || (dog.good_with_strangers <= 3 && @mydog.good_with_strangers),
+                (dog.size != "Petit" && @mydog.size != "Petit") || (dog.size == @mydog.size),
+                (dog.size != "Petit" && @mydog.size != "Petit") || (dog.size == @mydog.size)
+                ].count(true) * 10
+                %>% ⚡️
+            </p> </strong>
 
 
           </div>
