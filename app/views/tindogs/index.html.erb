@@ -24,20 +24,20 @@
             </div>
 
 
-            <strong> <p> ⚡️ Compatibilité : <%= [
-                @mydog.good_with_others_dogs > 3 || dog.neutered,
-                @mydog.good_with_chidren > 3 || (dog.size != "Petit"),
-                (@mydog.energy > 3 && dog.energy > 3) || (@mydog.energy <= 3 && dog.energy <= 3),
-                dog.good_with_others_dogs > 3 || @mydog.neutered,
-                dog.good_with_others_dogs > 3 || @mydog.neutered,
-                dog.good_with_chidren > 3 || (@mydog.size != "Petit"),
-                dog.good_with_chidren > 3 || (@mydog.size != "Petit"),
-                (dog.good_with_strangers > 3 && @mydog.good_with_strangers > 3) || (dog.good_with_strangers <= 3 && @mydog.good_with_strangers),
-                (dog.size != "Petit" && @mydog.size != "Petit") || (dog.size == @mydog.size),
-                (dog.size != "Petit" && @mydog.size != "Petit") || (dog.size == @mydog.size)
-                ].count(true) * 10
-                %>% ⚡️
-            </p> </strong>
+            <%# <strong> <p> ⚡️ Compatibilité : <%= [
+                # @mydog.good_with_others_dogs > 3 || dog.neutered,
+                # @mydog.good_with_chidren > 3 || (dog.size != "Petit"),
+                # (@mydog.energy > 3 && dog.energy > 3) || (@mydog.energy <= 3 && dog.energy <= 3),
+                # dog.good_with_others_dogs > 3 || @mydog.neutered,
+                # dog.good_with_others_dogs > 3 || @mydog.neutered,
+                # dog.good_with_chidren > 3 || (@mydog.size != "Petit"),
+                # dog.good_with_chidren > 3 || (@mydog.size != "Petit"),
+                # (dog.good_with_strangers > 3 && @mydog.good_with_strangers > 3) || (dog.good_with_strangers <= 3 && @mydog.good_with_strangers),
+                # (dog.size != "Petit" && @mydog.size != "Petit") || (dog.size == @mydog.size),
+                # (dog.size != "Petit" && @mydog.size != "Petit") || (dog.size == @mydog.size)
+                # ].count(true) * 10
+                %>
+            <%# </p> </strong> %>
 
 
           </div>
