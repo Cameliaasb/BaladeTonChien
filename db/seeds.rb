@@ -30,21 +30,21 @@ p "------------------------"
 p "----------USERS---------"
 
 user1 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user1.save ? "user1 créé" : "Soucis avec la création du user1"
+p user1.save ? "user1 OK" : "Problem with user1"
 user2 = User.new(username: "Tata", email: "test1@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user2.save ? "user2 créé" : "Soucis avec la création du user2"
+p user2.save ? "user2 OK" : "Problem with user2"
 user3 = User.new(username: "Titi", email: "test2@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user3.save ? "user3 créé" : "Soucis avec la création du user3"
+p user3.save ? "user3 OK" : "Problem with user3"
 user4 = User.new(username: "Tutu", email: "test3@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user4.save ? "user4 créé" : "Soucis avec la création du user4"
+p user4.save ? "user4 OK" : "Problem with user4"
 user5 = User.new(username: "Popo", email: "test4@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user5.save ? "user5 créé" : "Soucis avec la création du user5"
+p user5.save ? "user5 OK" : "Problem with user5"
 user6 = User.new(username: "Koko", email: "test5@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user6.save ? "user6 créé" : "Soucis avec la création du user6"
+p user6.save ? "user6 OK" : "Problem with user6"
 user7 = User.new(username: "Momo", email: "test6@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user7.save ? "user7 créé" : "Soucis avec la création du user7"
+p user7.save ? "user7 OK" : "Problem with user7"
 user8 = User.new(username: "Coco", email: "test7@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
-p user8.save ? "user8 créé" : "Soucis avec la création du user8"
+p user8.save ? "user8 OK" : "Problem with user8"
 
 
 p "------------------------"
@@ -56,7 +56,7 @@ dog1 = Dog.new(
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog1.photo.attach(io: file1, filename: "toto.jpg", content_type: "image/jpg")
-p dog1.save ? "dog1 créé" : "Soucis avec dog1"
+p dog1.save ? "dog1 OK" : "Problem with dog1"
 
 dog2 = Dog.new(
   name: "Ostia", breed: "Golden retriever", age: 7, size: "Grand", sexe: "Femelle",
@@ -64,7 +64,7 @@ dog2 = Dog.new(
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog2.photo.attach(io: file2, filename: "titi.jpg", content_type: "image/jpg")
-p dog2.save ? "dog2 créé" : "Soucis avec dog2"
+p dog2.save ? "dog2 OK" : "Problem with dog2"
 
 dog3 = Dog.new(
   name: "Buddy", breed: "Teckel", age: 2, size: "Petit", sexe: "Femelle",
@@ -72,7 +72,7 @@ dog3 = Dog.new(
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog3.photo.attach(io: file3, filename: "tata.jpg", content_type: "image/jpg")
-p dog3.save ? "dog3 créé" : "Soucis avec dog3"
+p dog3.save ? "dog3 OK" : "Problem with dog3"
 
 dog4 = Dog.new(
   name: "Ren", breed: "Berger Australien", age: 3, size: "Moyen", sexe: "Mâle",
@@ -80,39 +80,39 @@ dog4 = Dog.new(
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog4.photo.attach(io: file4, filename: "tete.jpg", content_type: "image/jpg")
-p dog4.save ? "dog4 créé" : "Soucis avec dog4"
+p dog4.save ? "dog4 OK" : "Problem with dog4"
 
 dog5 = Dog.new(
   name: "Zak", breed: "Berger des Shetland", age: 5, size: "Grand", sexe: "Mâle",
-  energy: 5, neutered: false, user_id: user5.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user_id: user5.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog5.photo.attach(io: file5, filename: "tyty.jpg", content_type: "image/jpg")
-p dog5.save ? "dog5 créé" : "Soucis avec dog5"
+p dog5.save ? "dog5 OK" : "Problem with dog5"
 
 dog6 = Dog.new(
   name: "Indra", breed: "Dalmatien", age: 1, size: "Grand", sexe: "Femelle",
-  energy: 5, neutered: false, user_id: user6.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user_id: user6.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog6.photo.attach(io: file6, filename: "tootoo.jpg", content_type: "image/jpg")
-p dog6.save ? "dog6 créé" : "Soucis avec dog6"
+p dog6.save ? "dog6 OK" : "Problem with dog6"
 
 dog7 = Dog.new(
   name: "Yuna", breed: "Husky", age: 7, size: "Moyen", sexe: "Femelle",
-  energy: 5, neutered: false, user_id: user7.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user_id: user7.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog7.photo.attach(io: file7, filename: "teetee.jpg", content_type: "image/jpg")
-p dog7.save ? "dog7 créé" : "Soucis avec dog7"
+p dog7.save ? "dog7 OK" : "Problem with dog7"
 
 dog8 = Dog.new(
   name: "Pirouette", breed: "Leonberg", age: 1, size: "Moyen", sexe: "Femelle",
-  energy: 2, neutered: false, user_id: user8.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user_id: user8.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog8.photo.attach(io: file8, filename: "taataa.jpg", content_type: "image/jpg")
-p dog8.save ? "dog8 créé" : "Soucis avec dog8"
+p dog8.save ? "dog8 OK" : "Problem with dog8"
 
 p "------------------------"
 p "----------WALKS---------"

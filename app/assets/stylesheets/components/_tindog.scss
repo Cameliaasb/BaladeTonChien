@@ -1,16 +1,127 @@
-.card-trip-user-cross {
-  position: absolute;
-  left: 16px;
-  background-color: white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+.tinder {
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
 }
 
-.card-trip-user-heart {
+.loaded.tinder {
+  opacity: 1;
+}
+
+// Cross or heart that appears when you swipe
+.tinder--status {
   position: absolute;
-  right: 16px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-  background-color: white;
-  img {
-    width: 100%;
+  top: 50%;
+  margin-top: -30px;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+
+  i {
+    font-size: 100px;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    width: 100px;
+    margin-left: -50px;
   }
+}
+
+
+.tinder_love .fa-heart {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.tinder_nope .fa-remove {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+// Container for all tinder cards
+.tinder--cards {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+
+// Card that you can drag to swipe
+.tinder--card {
+  width: 88vw;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid $light-gray;
+  cursor: -webkit-grab;   // for safari
+  cursor: -moz-grab;      // for mozilla
+  cursor: grab;
+
+  .center-everything {
+    background-color: white;
+    height: 70vh;
+    padding: 5%;
+    text-align: center;
+
+    h3 {
+      font-size: 32px;
+      color: black;
+      font-weight: bold;
+      margin-top: 0%;
+    }
+  }
+}
+
+div.tinder--card * {
+  pointer-events: none;
+}
+
+.moving.tinder--card {
+  transition: none;
+  cursor: -webkit-grabbing;  // for safari
+  cursor: -moz-grabbing;     // for mozilla
+  cursor: grabbing;
+}
+
+// buttons alternatives of swiping
+.tinder--buttons {
+  text-align: center;
+
+  i {
+    font-size: 32px;
+    vertical-align: middle;
+  }
+
+  button {
+    border-radius: 50%;
+    line-height: 60px;
+    width: 60px;
+    border: 0;
+    background: #FFFFFF;
+    margin: 10px 16px;
+
+    &focus {
+      outline: 0;
+
+    }
+  }
+}
+
+.fa-heart {
+  color: #FFACE4;
+}
+
+.fa-remove {
+  color: #CDD6DD;
 }

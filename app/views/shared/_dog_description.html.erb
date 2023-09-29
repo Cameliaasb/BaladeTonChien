@@ -2,11 +2,11 @@
 <% case dog.energy %>
 <% when 1 %>
 <%# filtre balade : difficulté %>
-  <p> <i class="fa-solid fa-circle-check positive"></i> Balades peu dynamiques </p>
+  <p> <i class="fa-solid fa-circle-xmark negative"></i> Balades dynamiques </p>
 <% when 2 %>
-  <p><i class="fa-solid fa-circle-xmark positive"></i> Balades assez dynamiques </p>
+  <p><i class="fa-solid fa-circle-xmark negative"></i> Balades trop dynamiques </p>
 <% when 3 %>
-  <p><i class="fa-solid fa-circle-xmark positive"></i> Balades dynamiques </p>
+  <p><i class="fa-solid fa-circle-check positive"></i> Balades dynamiques </p>
 <% end %>
 
 <p><strong>Ententes :  </strong> </p>

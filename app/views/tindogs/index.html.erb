@@ -11,16 +11,15 @@
         <div class="tinder--card" data-tindogs-target="card" data-receiver-id="<%= dog.id %>">
           <div class="center-everything">
 
-            <div class="tindog-title">
-              <%= cl_image_tag dog.photo.key, class:"avatar-large" %>
-              <h3> <%= dog.name %> </h2>
-              <p><%= dog.breed %>  </p>
-              <p><i class="fa-solid fa-venus-mars"></i>  <%= "#{dog.sexe} #{dog.neutered ? (dog.sexe == "Femelle" ? "stérilisée": "stérilisé") : (dog.sexe == "Femelle" ? "non stérilisée": "non stérilisé")} de  #{dog.age} #{dog.age > 1 ? "ans" : "an"}" %>  </p>
-            </div>
+            <%= cl_image_tag dog.photo.key, class:"avatar-large" %>
+            <h3> <%= dog.name %> </h2>
+            <p><%= dog.breed %>  </p>
+            <p> <i class="fa-solid fa-venus-mars"></i>
+              <%= "#{dog.sexe} #{dog.neutered ? (dog.sexe == "Femelle" ? "stérilisée": "stérilisé") : (dog.sexe == "Femelle" ? "non stérilisée": "non stérilisé")} de  #{dog.age} #{dog.age > 1 ? "ans" : "an"}" %>
+            </p>
 
-
-            <div class="description-tindog">
-                    <%= render partial: "shared/dog_description", locals: { dog: dog } %>
+            <div class="dog-description">
+              <%= render partial: "shared/dog_description", locals: { dog: dog } %>
             </div>
 
 
