@@ -17,7 +17,4 @@ Rails.application.routes.draw do
     resources :messages, only: %i[create]
   end
 
-  # erreur de t'as trop swipé
-  get '/noswipe', to: 'tindogs#noswipe', as: "no_swipe"
-  
 end

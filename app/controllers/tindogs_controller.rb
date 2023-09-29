@@ -26,9 +26,6 @@ class TindogsController < ApplicationController
     end
   end
 
-  def noswipe
-  end
-
   def match(tindog)
     Tindog.where(
       receiver_id: tindog.sender_id,
