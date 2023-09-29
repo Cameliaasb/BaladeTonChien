@@ -12,13 +12,15 @@
 @import "info_window";
 @import "map";
 
-// to declutter
-@import "search";
-@import "swipe_page";
-@import "walk_show";
-@import "tindog";
-@import "tindogs";
+// When match
+@import "match_card";
 @import "match";
 @import "message";
+
+@import "search";
+// To declutter
+@import "swipe_page";
+@import "tindog";
+@import "tindogs";
+@import "walk_show";
 @import "winmatch_page";
-@import "match_card";
