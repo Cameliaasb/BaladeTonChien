@@ -1,10 +1,11 @@
 .walk-card {
   top: -2vh;
-  // top commence à la fin de la map, -2 pour donner l'impression que la card est au dessus
   border-radius: 20px;
   background-color: white;
   text-align: start;
   padding: 5%;
+  height: calc(64vh - 70px);
+  overflow: scroll;
 
   h2 {
     margin-bottom: 16px;

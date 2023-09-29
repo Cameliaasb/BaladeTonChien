@@ -47,3 +47,13 @@
   overflow: scroll;
   background-color: white;
 }
+
+
+// walk show
+.full-page {
+  position:fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height: 100%;
+}
