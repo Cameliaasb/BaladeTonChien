@@ -31,19 +31,19 @@ p "----------USERS---------"
 
 user1 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user1.save ? "user1 créé" : "Soucis avec la création du user1"
-user2 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
+user2 = User.new(username: "Tata", email: "test1@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user2.save ? "user2 créé" : "Soucis avec la création du user2"
-user3 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
+user3 = User.new(username: "Titi", email: "test2@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user3.save ? "user3 créé" : "Soucis avec la création du user3"
-user4 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
+user4 = User.new(username: "Tutu", email: "test3@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user4.save ? "user4 créé" : "Soucis avec la création du user4"
-user5 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
+user5 = User.new(username: "Popo", email: "test4@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user5.save ? "user5 créé" : "Soucis avec la création du user5"
-user6 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
+user6 = User.new(username: "Koko", email: "test5@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user6.save ? "user6 créé" : "Soucis avec la création du user6"
-user7 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
+user7 = User.new(username: "Momo", email: "test6@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user7.save ? "user7 créé" : "Soucis avec la création du user7"
-user8 = User.new(username: "Toto", email: "test@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
+user8 = User.new(username: "Coco", email: "test7@gmail.com", password: "azerty", address: "20 Rue des Capucins, Lyon")
 p user8.save ? "user8 créé" : "Soucis avec la création du user8"
 
 

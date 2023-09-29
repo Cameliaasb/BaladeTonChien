@@ -1,9 +1,7 @@
   <div class="footer footer-links">
-      <%# <%= link_to tindog_path(current_user.dog)  do %>
-        <%# <i class="fa-solid fa-heart"></i> %>
-      <%# <% end %>
       <%= link_to tindogs_path, class: "#{"black" if current_page?(tindogs_path)}" do %>
-        <img width="32" height="32" src="https://img.icons8.com/ios-filled/50/1A1A1A/pets--v1.png" alt="pets--v1"/>      <% end %>
+        <img width="32" height="32" src="https://img.icons8.com/ios-filled/50/1A1A1A/pets--v1.png" alt="pets--v1"/>
+      <% end %>
       <%= link_to matches_path, class: "#{"black" if current_page?(matches_path)}" do %>
         <i class="fa-solid fa-message"></i>
       <% end %>

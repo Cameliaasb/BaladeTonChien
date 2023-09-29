@@ -12,9 +12,10 @@
       </div>
 
       <div class="dog-description bg-white">
-        <%= render "shared/dog_description", locals : {dog: @dog} %>
+        <%= render partial: "shared/dog_description", locals: { dog: @dog } %>
       </div>
 
     </div>
   </div>
 </div>
+<%= render "shared/footer" %>
