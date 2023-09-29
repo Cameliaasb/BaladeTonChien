@@ -4,22 +4,16 @@
   width: 100%;
   position: fixed;
   bottom:0;
-}
-
-.footer-links {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
+  justify-content: space-around;
+
+  a {
+   color: black;
+   opacity: 0.5;
+   font-size: 24px;
+   &.black {
+     opacity: 1;
+   }
 }
-
-.footer-links a {
-  color: black;
-  opacity: 0.5;
-  font-size: 24px;
-  padding: 10%;
-
-  &.black {
-    opacity: 1;
-  }
 }
