@@ -52,7 +52,7 @@ p "----------DOGS----------"
 
 dog1 = Dog.new(
   name: "Rex", breed: "Berger Australien", age: 4, size: "Grand", sexe: "Mâle",
-  energy: rand(1..3), neutered: true, user_id: user1.id, males: true, females: true,
+  energy: rand(1..3), neutered: true, user_id: user1.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog1.photo.attach(io: file1, filename: "toto.jpg", content_type: "image/jpg")
@@ -60,7 +60,7 @@ p dog1.save ? "dog1 créé" : "Soucis avec dog1"
 
 dog2 = Dog.new(
   name: "Ostia", breed: "Golden retriever", age: 7, size: "Grand", sexe: "Femelle",
-  energy: rand(1..3), neutered: true, user_id: user2.id, males: true, females: true,
+  energy: rand(1..3), neutered: true, user_id: user2.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog2.photo.attach(io: file2, filename: "titi.jpg", content_type: "image/jpg")
@@ -68,7 +68,7 @@ p dog2.save ? "dog2 créé" : "Soucis avec dog2"
 
 dog3 = Dog.new(
   name: "Buddy", breed: "Teckel", age: 2, size: "Petit", sexe: "Femelle",
-  energy: rand(1..3), neutered: true, user_id: user3.id, males: true, females: true,
+  energy: rand(1..3), neutered: true, user_id: user3.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog3.photo.attach(io: file3, filename: "tata.jpg", content_type: "image/jpg")
@@ -76,7 +76,7 @@ p dog3.save ? "dog3 créé" : "Soucis avec dog3"
 
 dog4 = Dog.new(
   name: "Ren", breed: "Berger Australien", age: 3, size: "Moyen", sexe: "Mâle",
-  energy: rand(1..3), neutered: true,  user_id: user4.id, males: true, females: true,
+  energy: rand(1..3), neutered: true,  user_id: user4.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog4.photo.attach(io: file4, filename: "tete.jpg", content_type: "image/jpg")
@@ -84,7 +84,7 @@ p dog4.save ? "dog4 créé" : "Soucis avec dog4"
 
 dog5 = Dog.new(
   name: "Zak", breed: "Berger des Shetland", age: 5, size: "Grand", sexe: "Mâle",
-  energy: 5, neutered: false, user_id: user5.id, males: true, females: true,
+  energy: 5, neutered: false, user_id: user5.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog5.photo.attach(io: file5, filename: "tyty.jpg", content_type: "image/jpg")
@@ -92,7 +92,7 @@ p dog5.save ? "dog5 créé" : "Soucis avec dog5"
 
 dog6 = Dog.new(
   name: "Indra", breed: "Dalmatien", age: 1, size: "Grand", sexe: "Femelle",
-  energy: 5, neutered: false, user_id: user6.id, males: true, females: true,
+  energy: 5, neutered: false, user_id: user6.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog6.photo.attach(io: file6, filename: "tootoo.jpg", content_type: "image/jpg")
@@ -100,7 +100,7 @@ p dog6.save ? "dog6 créé" : "Soucis avec dog6"
 
 dog7 = Dog.new(
   name: "Yuna", breed: "Husky", age: 7, size: "Moyen", sexe: "Femelle",
-  energy: 5, neutered: false, user_id: user7.id, males: true, females: true,
+  energy: 5, neutered: false, user_id: user7.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog7.photo.attach(io: file7, filename: "teetee.jpg", content_type: "image/jpg")
@@ -108,7 +108,7 @@ p dog7.save ? "dog7 créé" : "Soucis avec dog7"
 
 dog8 = Dog.new(
   name: "Pirouette", breed: "Leonberg", age: 1, size: "Moyen", sexe: "Femelle",
-  energy: 2, neutered: false, user_id: user8.id, males: true, females: true,
+  energy: 2, neutered: false, user_id: user8.id, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog8.photo.attach(io: file8, filename: "taataa.jpg", content_type: "image/jpg")
