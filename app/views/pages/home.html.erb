@@ -1,5 +1,5 @@
 
-<div class="app-container">
+<div class="app-container full-page">
 
   <div class="center-container">
     <div class="dog">
@@ -37,7 +37,7 @@
     </div>
 
 
-    <%= link_to(dog_walks_path(current_user.dog), class:"text-decoration-none action-btn") do %>
+    <%= link_to(dog_walks_path(user_signed_in? ? current_user.dog : new_user_session_path), class:"text-decoration-none action-btn") do %>
     On y va ?
     <% end %>
   </div>
