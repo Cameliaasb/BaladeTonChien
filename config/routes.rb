@@ -7,10 +7,9 @@ Rails.application.routes.draw do
     resources :walks, only: %i[index show]
   end
 
-  # Profil du chien
+  # Dog profile
   get '/mydog', to: 'dogs#mydog', as: "my_dog"
 
-  resources :users, only: %i[index]
   resources :tindogs, only: %i[index create]
 
   resources :matches, only: %i[index show] do

@@ -11,3 +11,16 @@
   border-radius: 30px;
   text-align: left;
 }
+
+.form-in-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input{
+  width: 30%;
+}
+
+.large-form-input {
+  width: 40%;
+}
