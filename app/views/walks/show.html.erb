@@ -1,6 +1,6 @@
 <div class="app-container" >
 
-  <div>
+  <div class="show-container">
     <%= link_to(:back, class:"text-decoration-none return-btn") do %>
       <i class="fa-solid fa-chevron-left"></i>
     <% end %>
@@ -25,9 +25,7 @@
         <p> <strong> <i class="fa-regular fa-map" ></i> </strong> <%= @walk.distance %> km</p>
         <p><strong> <i class="fa-regular fa-clock"></i></strong> <%= @walk.duration >= 60 ? Time.at(@walk.duration * 60).utc.strftime("%Hh%M") : Time.at(@walk.duration * 60).utc.strftime("%Mmin")  %></p>
       </div>
-      <div class="walk-description">
-        <p><%=@walk.description %></p>
-      </div>
+        <p class="walk-description"><%=@walk.description %></p>
 
     </div>
 

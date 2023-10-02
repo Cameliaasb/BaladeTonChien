@@ -4,12 +4,7 @@
   background-color: white;
   text-align: start;
   padding: 5%;
-  height: calc(64vh - 70px);
-  overflow: scroll;
-
-  h2 {
-    margin-bottom: 16px;
-  }
+  min-height: calc(64vh - 70px);
 }
 
 .walk-infos {
@@ -19,21 +14,6 @@
   gap: 8%;
 }
 
-.walk-photo {
-  width: 30%;
-}
-
-.walk-photo {
-  width: 100%;
-  border-radius: 30px;
-  margin-bottom: 4px;
-  max-height: 160px;
-  object-fit: cover;
-  margin-top: 16px
-}
-
-
-.walk-description > p {
-  text-align: left;
+.walk-description {
   margin: 16px 0px;
 }
