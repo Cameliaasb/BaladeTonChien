@@ -7,7 +7,7 @@
       <%= f.input :name, label: "Nom" %>
       <div class="form-in-row">
         <%= f.input :breed, label: "Race", class:"large-form-input" %>
-        <%= f.input :neutered, label: "Stérilisé(e)", as: :boolean %>
+        <%= f.input :neutered, label: "Stérilisé(e)", as: :boolean, :input_html => { :checked => true } %>
       </div>
       <div class="form-in-row">
         <div class="form-input"><%= f.input :age, label: "Age (ans)" %> </div>
@@ -19,12 +19,12 @@
 
       <h3>Ententes : </h3>
       <div>
-        <%= f.input :neutered_males, label: "Mâles stérilisés", as: :boolean %>
-        <%= f.input :neutered_females, label: "Femelles stérilisées", as: :boolean %>
-        <%= f.input :unneutered_males, label: "Mâles non stérilisés", as: :boolean %>
-        <%= f.input :unneutered_females, label: "Femelles non stérilisées", as: :boolean %>
-        <%= f.input :small_dogs, label: "Petits chiens", as: :boolean %>
-        <%= f.input :big_dogs, label: "Grands chiens", as: :boolean %>
+        <%= f.input :neutered_males, label: "Mâles stérilisés", as: :boolean, :input_html => { :checked => true } %>
+        <%= f.input :neutered_females, label: "Femelles stérilisées", as: :boolean, :input_html => { :checked => true }  %>
+        <%= f.input :unneutered_males, label: "Mâles non stérilisés", as: :boolean, :input_html => { :checked => true }  %>
+        <%= f.input :unneutered_females, label: "Femelles non stérilisées", as: :boolean, :input_html => { :checked => true }  %>
+        <%= f.input :small_dogs, label: "Petits chiens", as: :boolean, :input_html => { :checked => true }  %>
+        <%= f.input :big_dogs, label: "Grands chiens", as: :boolean, :input_html => { :checked => true }  %>
       </div>
 
     </div>

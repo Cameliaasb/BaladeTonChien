@@ -3,7 +3,9 @@ class Dog < ApplicationRecord
   has_many         :tindogs, foreign_key: "sender_id" # , dependent: :destroy
   has_one_attached :photo
 
+  validates :name, :breed, :age, :sexe, :size, :energy, :photo, presence: true
+
   SIZE = ["Grand", "Moyen", "Petit"]
   SEX = ["Mâle", "Femelle"]
-  ENERGY = ["Dynamiques", "Peu dynamiques", "Pas dynamiques"]
+  ENERGY = [1,2,3]
 end

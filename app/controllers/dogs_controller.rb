@@ -8,6 +8,7 @@ class DogsController < ApplicationController
     if @dog.save
       redirect_to root_path
     else
+      raise
       render :new, status: :unprocessable_entity
     end
   end
