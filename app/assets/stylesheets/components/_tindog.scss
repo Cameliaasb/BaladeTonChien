@@ -70,9 +70,13 @@
 
   .center-everything {
     background-color: white;
-    height: 70vh;
+    height: 72vh;
     padding: 5%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 
     h3 {
       font-size: 32px;

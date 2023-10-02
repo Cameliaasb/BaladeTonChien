@@ -2,7 +2,7 @@
   <div class="">
     <div class="">
 
-      <div class="bubbles">
+      <div class="dog-profile">
         <%= link_to destroy_user_session_path, data:{turbo_method: :delete} do %>
           <%= cl_image_tag @dog.photo.key, class:"avatar-large"%>
         <% end %>

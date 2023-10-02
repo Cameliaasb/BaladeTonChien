@@ -12,7 +12,7 @@ export default class extends Controller {
   initializeCards() {
     this.cardTargets.forEach((card, index) => {
       card.style.zIndex = this.cardTargets.length - index;
-      card.style.transform = `scale(${(20 - index) / 20}) translateY(-${30 * index}px) rotate(${index * 2}deg)` ;
+      card.style.transform = `scale(${(20 - index) / 20}) translateY(-${20 * index}px) rotate(${index}deg)` ;
       // card.style.transform = `translateY(-${5 * index}px) rotate(${index * 2}deg)` ;
       card.style.opacity = (10 - index) / 10;
     });
