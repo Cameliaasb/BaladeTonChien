@@ -2,13 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="toggle"
 export default class extends Controller {
-  static targets = ["filtres", "img"]
+  static targets = ["filters", "filter"]
   connect() {
-    console.log(this.filtresTarget)
+    console.log("Toggle controller")
   }
 
   boom() {
-    this.filtresTarget.classList.toggle("d-none");
-    this.imgTarget.classList.toggle("d-none");
+    this.filtersTarget.classList.toggle("bg-white");
+    this.filterTargets.forEach (filter => filter.classList.toggle("d-none")) ;
   }
 }
