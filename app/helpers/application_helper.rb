@@ -7,7 +7,8 @@ module ApplicationHelper
       end
     else
       # link_to Inferieur à 1h, request.params.merge(duration: "60"), class: "filter-link"
-      link_to request.params.merge(type.to_sym => value), class: "filter-link d-none", data: { toggle_target: "filter" } do
+      # add d-none to class if filter icon clickable
+      link_to request.params.merge(type.to_sym => value), class: "filter-link ", data: { toggle_target: "filter" } do
         text.to_s
       end
     end
