@@ -10,10 +10,10 @@ export default class extends Controller {
   }
 
   initializeCards() {
+    // distributes cards like in a deck
     this.cardTargets.forEach((card, index) => {
       card.style.zIndex = this.cardTargets.length - index;
       card.style.transform = `scale(${(20 - index) / 20}) translateY(-${20 * index}px) rotate(${index}deg)` ;
-      // card.style.transform = `translateY(-${5 * index}px) rotate(${index * 2}deg)` ;
       card.style.opacity = (10 - index) / 10;
     });
 
@@ -21,9 +21,13 @@ export default class extends Controller {
   }
 
   movecard() {
-    const caards = this.cardTargets
+    // distributes cards like in a deck
+    const deck = this.cardTargets
     const tinderContainer = this.element
+
+    // https://hammerjs.github.io/
     this.cardTargets.forEach(function (el) {
+
       const hammertime = new Hammer(el)
       hammertime.on('pan', function (event) {
         el.classList.add('moving');
@@ -71,7 +75,6 @@ export default class extends Controller {
             })
               .then(response => response.text())
               .then(data => {
-                console.log(data);
                 setTimeout(() => {
                   document.body.insertAdjacentHTML("beforeend", data)
                 }, 500);
@@ -86,24 +89,25 @@ export default class extends Controller {
           const yMulti = event.deltaY / 80;
           const rotate = xMulti * yMulti;
           el.style.transform = `translate(${toX}px, ${toY + event.deltaY}px) rotate(${rotate}deg)`;
-          const newCards = caards.filter((toto) => {
+          const newCards = deck.filter((toto) => {
             return !toto.classList.contains("removed")
           })
 
           newCards.forEach((card, index) => {
-            card.style.zIndex = caards.length - index;
+            card.style.zIndex = deck.length - index;
             card.style.transform = `scale(${(20 - index) / 20}) translateY(-${30 * index}px) rotate(${index * 2}deg)` ;
             card.style.opacity = (10 - index) / 10;
           });
           tinderContainer.classList.add("loaded");
         }
       });
+
     })
   }
 
   nope(event) {
     event.preventDefault();
-    const caards = this.cardTargets
+    const deck = this.cardTargets
     const cards  = this.cardTargets.filter((card) => !card.classList.contains("removed"));
     const moveOutWidth = document.body.clientWidth * 1.5;
 
@@ -112,13 +116,13 @@ export default class extends Controller {
     const card = cards[0];
     card.classList.add("removed");
     card.style.transform = `translate(-${moveOutWidth}px, -100px) rotate(-30deg)`;
-    const newCards = caards.filter((toto) => {
+    const newCards = deck.filter((toto) => {
       return !toto.classList.contains("removed")
     })
     card.classList.remove();
 
     newCards.forEach((card, index) => {
-      card.style.zIndex = caards.length - index;
+      card.style.zIndex = deck.length - index;
       card.style.transform = `scale(${(20 - index) / 20}) translateY(-${30 * index}px) rotate(${index * 2}deg)` ;
       card.style.opacity = (10 - index) / 10;
     });
@@ -126,7 +130,7 @@ export default class extends Controller {
 
   love(event) {
     event.preventDefault();
-    const caards = this.cardTargets
+    const deck = this.cardTargets
     const cards  = this.cardTargets.filter((card) => !card.classList.contains("removed"));
     const moveOutWidth = document.body.clientWidth * 1.5;
 
@@ -149,23 +153,21 @@ export default class extends Controller {
     })
     .then(response => response.text())
     .then(data => {
-        console.log(data);
         setTimeout(() => {
           document.querySelector('body').insertAdjacentHTML("beforeend", data)
         }, 500);
       })
 
-    const newCards = caards.filter((toto) => {
+    const newCards = deck.filter((toto) => {
       return !toto.classList.contains("removed")
     })
     card.classList.remove();
 
     newCards.forEach((card, index) => {
-      card.style.zIndex = caards.length - index;
+      card.style.zIndex = deck.length - index;
       card.style.transform = `scale(${(20 - index) / 20}) translateY(-${30 * index}px) rotate(${index * 2}deg)` ;
       card.style.opacity = (10 - index) / 10;
     });
-    // tinderContainer.classList.add("loaded");
   }
 
   remove(event) {

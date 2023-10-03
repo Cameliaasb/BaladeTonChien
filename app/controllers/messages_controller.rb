@@ -7,8 +7,8 @@ class MessagesController < ApplicationController
     @message.chatroom = @chatroom
     @message.user = current_user
 
-
-    if @message.content.scan(/(.*)(http\S*)(.*)/).empty?
+    # if the message is a link for a walk, it renders the walk title
+    if @message.content.scan(/(.*)(http\S*walk)(.*)/).empty?
       content = @message.content
     else
       content = @message.content.scan(/(.*)(http\S*)(.*)/).first.map do |el|
@@ -17,6 +17,7 @@ class MessagesController < ApplicationController
     end
     @message.content = content
 
+    # The msg is sent if attributes are valid (content, user, chatroom)
     if @message.save
       ChatroomChannel.broadcast_to(
         @chatroom,

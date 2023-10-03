@@ -15,6 +15,7 @@ class TindogsController < ApplicationController
     @tindog.sender_id = current_user.dog.id
     @tindog.save
 
+    # checks if the other "dog" has also swiped possively, if yes a chatroom is created
     if match(@tindog)
       @chatroom = Chatroom.create(first_user: @tindog.receiver.user, second_user: @tindog.sender.user)
       render partial: "chatrooms/its_a_match", locals: { tindog: @tindog, chatroom: @chatroom }, formats: :html
