@@ -1,6 +1,8 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!
+
   def create
-    @match = Match.find(params[:match_id])
+    @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
     unless @message.content.scan(/(.*)(http\S*)(.*)/).empty?
       content = @message.content.scan(/(.*)(http\S*)(.*)/).first.map do |el|
@@ -10,16 +12,16 @@ class MessagesController < ApplicationController
       content = @message.content
     end
     @message.content = content
-    @message.match = @match
+    @message.chatroom = @chatroom
     @message.user = current_user
     if @message.save
-      MatchChannel.broadcast_to(
-        @match,
+      ChatroomChannel.broadcast_to(
+        @chatroom,
         { message: @message, user: current_user }
       )
       head :ok
     else
-      render "matches/show", status: :unprocessable_entity
+      render "chatrooms/show", status: :unprocessable_entity
     end
   end
 

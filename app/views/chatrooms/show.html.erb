@@ -1,10 +1,10 @@
 <div class="container match"
     data-controller="match-subscription"
-    data-match-subscription-match-id-value="<%= @match.id%>"
+    data-match-subscription-chatroom-id-value="<%= @chatroom.id%>"
     data-match-subscription-current-user-id-value="<%= current_user.id%>"
 >
   <div class="top">
-    <%= link_to(matches_path, class:"text-decoration-none") do %>
+    <%= link_to(chatrooms_path, class:"text-decoration-none") do %>
       <i class="fa-solid fa-chevron-left"></i>
     <% end %>
     <h3> <%= @user.username %> </h3>
@@ -23,7 +23,7 @@
     <% end %>
   </div>
 
-    <%= simple_form_for [@match, @message],
+    <%= simple_form_for [@chatroom, @message],
     html: { data: { action: "turbo:submit-end->match-subscription#resetForm" }, class: "d-flex" } do |f| %>
     <%= f.input :content,
       label: false,

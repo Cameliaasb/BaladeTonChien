@@ -1,0 +1,30 @@
+<div class="app-container">
+  <div class="message-container">
+  <h1>Discussions</h1>
+    <% @chatrooms.each do |chatroom| %>
+      <div class="message-card">
+
+        <% if chatroom.users.first == current_user  %>
+          <%= link_to(chatroom_path(chatroom), class:"text-decoration-none text-dark flex") do %>
+            <%= cl_image_tag chatroom.users.last.dog.photo.key, class:"avatar", crop: :fill %>
+            <div>
+              <strong> <%= chatroom.users.last.username %> </strong>
+              <p> Propriétaire de <%= chatroom.users.last.dog.name %> </p>
+            </div>
+          <% end %>
+        <% else  %>
+          <%= link_to(chatroom_path(chatroom), class:"text-decoration-none text-dark flex") do %>
+            <%= cl_image_tag chatroom.users.first.dog.photo.key, class:"avatar", crop: :fill %>
+            <div>
+              <strong> <%= chatroom.users.first.username %> </strong>
+              <p> Propriétaire de <%= chatroom.users.first.dog.name %> </p>
+            </div>
+          <% end %>
+        <% end %>
+
+
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>

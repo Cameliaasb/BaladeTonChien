@@ -2,7 +2,7 @@
       <%= link_to tindogs_path, class: "#{"black" if current_page?(tindogs_path)}" do %>
         <img width="32" height="32" src="<%= asset_path('tindog.png') %>" alt="two-dogs"/>
       <% end %>
-      <%= link_to matches_path, class: "#{"black" if current_page?(matches_path)}" do %>
+      <%= link_to chatrooms_path, class: "#{"black" if current_page?(chatrooms_path)}" do %>
         <i class="fa-solid fa-message"></i>
       <% end %>
       <%= link_to dog_walks_path(current_user.dog), class: "#{"black" if current_page?(dog_walks_path(current_user.dog))}" do %>

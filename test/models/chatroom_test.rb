@@ -1,6 +1,6 @@
 require "test_helper"
 
-class MatchesControllerTest < ActionDispatch::IntegrationTest
+class ChatroomTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

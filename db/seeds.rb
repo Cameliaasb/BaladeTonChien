@@ -4,7 +4,7 @@ Message.destroy_all
 Tindog.destroy_all
 User.destroy_all
 Walk.destroy_all
-Match.destroy_all
+Chatroom.destroy_all
 
 p "------------------------"
 p "-------DOG IMAGES-------"

@@ -4,12 +4,12 @@ import { createConsumer } from "@rails/actioncable"
 
 // Connects to data-controller="match-subscription"
 export default class extends Controller {
-  static values = { matchId: Number, currentUserId: Number }
+  static values = { chatroomId: Number, currentUserId: Number }
   static targets = ["messages"]
 
   connect() {
     this.channel = createConsumer().subscriptions.create(
-      { channel: "MatchChannel", id: this.matchIdValue },
+      { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: data => this.#insertMessageAndScrollDown(data) }
     )
   }
@@ -30,7 +30,6 @@ export default class extends Controller {
         </div>
       </div>
     `
-
   }
 
   #justifyClass(currentUserIsSender) {
@@ -46,7 +45,7 @@ export default class extends Controller {
   }
 
   disconnect() {
-    console.log("Unsubscribed from the match")
+    console.log("Unsubscribed from the chat")
     this.channel.unsubscribe()
   }
 }

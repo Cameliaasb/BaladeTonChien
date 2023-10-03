@@ -1,4 +1,6 @@
 class DogsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @dog = Dog.new
   end
@@ -9,7 +11,6 @@ class DogsController < ApplicationController
     if @dog.save
       redirect_to root_path
     else
-
       render :new, status: :unprocessable_entity
     end
   end
@@ -18,9 +19,6 @@ class DogsController < ApplicationController
     @dog = current_user.dog
   end
 
-  def update
-    # pouvoir récupérérer ce qui se passe dans le formulaire du dog profile
-  end
 
   private
 
