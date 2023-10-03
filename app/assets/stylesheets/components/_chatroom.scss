@@ -1,7 +1,7 @@
-.match {
+.chat {
   background: white;
   // margin-top: 9px;
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

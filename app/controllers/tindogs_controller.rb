@@ -13,9 +13,9 @@ class TindogsController < ApplicationController
     @tindog.save
 
     if match(@tindog)
-      @chatroom = Chatroom.create(first_user: @tindog.receiver, second_user: @tindog.sender)
-r      @message = Message.create(user: current_user, content: "🦴🥎", chatroom: @chatroom)
-      @message = Message.create(user: Dog.find(@tindog.receiver_id).user, content: "🐾🌳", chatroom: @chatroom)
+      @chatroom = Chatroom.create(first_user: @tindog.receiver.user, second_user: @tindog.sender.user)
+      # @message = Message.create(user: current_user, content: "🦴🥎", chatroom: @chatroom)
+      # @message = Message.create(user: Dog.find(@tindog.receiver_id).user, content: "🐾🌳", chatroom: @chatroom)
       render partial: "chatrooms/its_a_match", locals: { tindog: @tindog, chatroom: @chatroom }, formats: :html
     end
   end

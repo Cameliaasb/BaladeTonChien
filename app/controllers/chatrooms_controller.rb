@@ -4,12 +4,12 @@ class ChatroomsController < ApplicationController
 
   def show
     @chatroom = Chatroom.find(params[:id])
-    @user = @chatroom.users.reject { |user| user == current_user }.first
+    @user = @chatroom.first_user == current_user ? @chatroom.second_user : @chatroom.first_user
     @message = Message.new
     @messages = @chatroom.messages.order(:created_at)
   end
 
   def index
-    @chatrooms = Chatroom.all.select { |chat| chat.users.include?(current_user) }
+    @chatrooms = Chatroom.where('first_user_id = ? OR second_user_id = ?', current_user.id, current_user.id)
   end
 end

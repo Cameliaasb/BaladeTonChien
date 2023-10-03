@@ -2,18 +2,21 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
-    unless @message.content.scan(/(.*)(http\S*)(.*)/).empty?
+    @chatroom = Chatroom.find(params[:chatroom_id])
+    @message.chatroom = @chatroom
+    @message.user = current_user
+
+
+    if @message.content.scan(/(.*)(http\S*)(.*)/).empty?
+      content = @message.content
+    else
       content = @message.content.scan(/(.*)(http\S*)(.*)/).first.map do |el|
         el.include?('http') ? "<a href=#{el} class='text-dark'>#{Walk.find(el.scan(/walks\/(\d*)/).join()).title}</a>" : el
       end.join
-    else
-      content = @message.content
     end
     @message.content = content
-    @message.chatroom = @chatroom
-    @message.user = current_user
+
     if @message.save
       ChatroomChannel.broadcast_to(
         @chatroom,
@@ -23,6 +26,7 @@ class MessagesController < ApplicationController
     else
       render "chatrooms/show", status: :unprocessable_entity
     end
+
   end
 
   private

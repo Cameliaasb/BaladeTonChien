@@ -1,0 +1,7 @@
+<%= link_to(chatroom_path(chatroom), class:"text-decoration-none text-dark flex") do %>
+  <%= cl_image_tag user.dog.photo.key, class:"avatar", crop: :fill %>
+  <div>
+    <strong> <%= user.username %> </strong>
+    <p> Propriétaire de <%= user.dog.name %> </p>
+  </div>
+<% end %>

@@ -4,23 +4,13 @@
     <% @chatrooms.each do |chatroom| %>
       <div class="message-card">
 
-        <% if chatroom.users.first == current_user  %>
-          <%= link_to(chatroom_path(chatroom), class:"text-decoration-none text-dark flex") do %>
-            <%= cl_image_tag chatroom.users.last.dog.photo.key, class:"avatar", crop: :fill %>
-            <div>
-              <strong> <%= chatroom.users.last.username %> </strong>
-              <p> Propriétaire de <%= chatroom.users.last.dog.name %> </p>
-            </div>
-          <% end %>
-        <% else  %>
-          <%= link_to(chatroom_path(chatroom), class:"text-decoration-none text-dark flex") do %>
-            <%= cl_image_tag chatroom.users.first.dog.photo.key, class:"avatar", crop: :fill %>
-            <div>
-              <strong> <%= chatroom.users.first.username %> </strong>
-              <p> Propriétaire de <%= chatroom.users.first.dog.name %> </p>
-            </div>
-          <% end %>
-        <% end %>
+
+        <%= render partial: "chat_preview",
+            locals: {
+              user: chatroom.first_user == current_user ? chatroom.second_user : chatroom.first_user,
+              chatroom: chatroom
+            }
+        %>
 
 
       </div>
@@ -28,4 +18,3 @@
   </div>
 </div>
 <%= render "shared/footer" %>
-<%= console %>
