@@ -13,3 +13,16 @@
   object-fit: cover;
   border: white 2px solid;
 }
+
+
+.two-avatars {
+  position: relative;
+  margin-right: 100px;
+  margin-top: 40px;
+}
+
+.overlapping-avatar {
+  position: absolute;
+  top: 0;
+  right: -100px;
+}

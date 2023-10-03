@@ -7,5 +7,5 @@ class Dog < ApplicationRecord
 
   SIZE = ["Grand", "Moyen", "Petit"]
   SEX = ["Mâle", "Femelle"]
-  ENERGY = [1,2,3]
+  ENERGY = [1, 2, 3]
 end

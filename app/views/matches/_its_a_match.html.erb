@@ -1,28 +1,20 @@
-<div class="match_container" data-action="click->tindogs#remove">
+<div class="app-container match-container"  data-action="click->tindogs#remove">
 
-  <iframe src="https://giphy.com/embed/h7uTwqEHysbd2lhyDP" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <div>
+    <iframe src="https://giphy.com/embed/h7uTwqEHysbd2lhyDP" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <h1>C'est un Match</h1>
+  </div>
 
-
-    <div class="its">
-      <div class="matchi">
-        <h1>C'est un MATCH</h1>
-      </div>
-
-
-      <div class="chien1">
-        <%= cl_image_tag tindog.receiver.photo.key, class:"avatar-large", crop: :fill %>
-      <p class="text-center"><%= tindog.receiver.name %></p>
-        <div class="chien2">
-          <%= cl_image_tag tindog.sender.photo.key, class:"avatar-large", crop: :fill %>
-          <p class="text-center"><%= tindog.sender.name %></p>
-        </div>
-      </div>
-
-      <div class="">
-        <%= link_to(match_path(match), class:"text-decoration-none action-btn") do %>
-          <%=  "Prévois une sortie" %>
-        <% end %>
-      </div>
+  <div class="two-avatars">
+    <%= cl_image_tag tindog.receiver.photo.key, class:"avatar-large", crop: :fill %>
+    <div class="overlapping-avatar">
+      <%= cl_image_tag tindog.sender.photo.key, class:"avatar-large", crop: :fill %>
     </div>
+  </div>
+
+
+  <%= link_to(match_path(match), class:"text-decoration-none action-btn") do %>
+    <%=  "Prévois une sortie" %>
+  <% end %>
 
 </div>
