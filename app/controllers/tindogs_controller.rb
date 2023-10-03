@@ -2,8 +2,11 @@ class TindogsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    # All dogs swiped positively
     tindogs_ids = current_user.dog.tindogs.pluck(:receiver_id)
+    # All dogs that are neither user's own dog or that were swiped
     @dogs = Dog.where.not(id: tindogs_ids.push(current_user.dog.id))
+
     @mydog = Dog.find(current_user.dog.id)
   end
 
@@ -14,8 +17,6 @@ class TindogsController < ApplicationController
 
     if match(@tindog)
       @chatroom = Chatroom.create(first_user: @tindog.receiver.user, second_user: @tindog.sender.user)
-      # @message = Message.create(user: current_user, content: "🦴🥎", chatroom: @chatroom)
-      # @message = Message.create(user: Dog.find(@tindog.receiver_id).user, content: "🐾🌳", chatroom: @chatroom)
       render partial: "chatrooms/its_a_match", locals: { tindog: @tindog, chatroom: @chatroom }, formats: :html
     end
   end
