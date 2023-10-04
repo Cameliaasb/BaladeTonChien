@@ -1,3 +1,21 @@
+.message-card {
+border-bottom: 0.8px solid $main;
+background-color: white;
+padding: 4%;
+width: 100%;
+
+  .flex {
+    display: flex;
+    gap: 4%;
+    align-items: center;
+  }
+
+  p {
+    color: grey;
+  }
+
+}
+
 .message-row {
   margin-bottom: 10px;
 }
@@ -16,5 +34,4 @@
 .receiver-style {
   background-color: #ECECEC;
   border-radius: 16px 28px 28px 0px;
-
 }

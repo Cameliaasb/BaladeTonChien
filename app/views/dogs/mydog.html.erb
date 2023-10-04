@@ -4,9 +4,7 @@
   <% end %>
 
   <div class="dog-profile">
-    <%= link_to destroy_user_session_path, data:{turbo_method: :delete} do %>
-      <%= cl_image_tag @dog.photo.key, class:"avatar-large"%>
-    <% end %>
+    <%= cl_image_tag @dog.photo.key, class:"avatar-large"%>
     <h2> <%= @dog.name %> </h2>
     <p><%= @dog.breed %>  </p>
     <p><i class="fa-solid fa-venus-mars"></i>  <%= @dog.sexe %> de <%= "#{@dog.age} #{@dog.age > 1 ? "ans" : "an"}"  %> </p>

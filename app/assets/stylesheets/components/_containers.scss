@@ -59,6 +59,13 @@ iframe {
   width: 100%;
   overflow: scroll;
   background-color: white;
+
+  h1 {
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+
 }
 
 
