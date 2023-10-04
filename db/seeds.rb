@@ -1,30 +1,29 @@
 require 'open-uri'
 require 'json'
-Message.destroy_all
-Tindog.destroy_all
+
+Chatroom.destroy_all
 User.destroy_all
 Walk.destroy_all
-Chatroom.destroy_all
 
 p "------------------------"
 p "-------DOG IMAGES-------"
 
 file1 = URI.open("https://img.freepik.com/free-photo/cute-sweet-puppy-australian-shepherd-pet-posing-isolated-white-wall_155003-36677.jpg?w=996&t=st=1693843042~exp=1693843642~hmac=b53178c2e84b47060efaeffb9a3389c35a4ae985fdd6b62ff3fe1d8ca6ca4615")
-puts "img1"
+puts "img1 OK"
 file2 = URI.open("https://images.pexels.com/photos/2409503/pexels-photo-2409503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
-puts "img2"
+puts "img2 OK"
 file3 = URI.open("https://www.chien.fr/assets/img/000/107/og-image/teckel.jpg")
-puts "img3"
+puts "img3 OK"
 file4 = URI.open("https://www.eleveurs-online.com/data/eleveur/140/1600-139061.253.jpg")
-puts "img4"
+puts "img4 OK"
 file5 = URI.open("https://animalaxy.fr/wp-content/uploads/2018/02/iStock-1197663442-758x505.jpg")
-puts "img5"
+puts "img5 OK"
 file6 = URI.open("https://global-uploads.webflow.com/62b2d13ccd148d1bccca591c/64b589b868c9cf057cbaec8f_Taille%20Dalmatien.jpg")
-puts "img6"
+puts "img6 OK"
 file7 = URI.open("https://www.santevet.com/upload/admin/images/article/Chien%202/races_de_chiens/siberian-husky.jpg")
-puts "img7"
+puts "img7 OK"
 file8 = URI.open("https://www.empruntemontoutou.com/wp-content/uploads/2020/02/LEONBERG.jpg")
-puts "img8"
+puts "img8 OK"
 
 p "------------------------"
 p "----------USERS---------"
@@ -52,7 +51,7 @@ p "----------DOGS----------"
 
 dog1 = Dog.new(
   name: "Rex", breed: "Berger Australien", age: 4, size: "Grand", sexe: "Mâle",
-  energy: rand(1..3), neutered: true, user_id: user1.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: true, user: user1, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog1.photo.attach(io: file1, filename: "toto.jpg", content_type: "image/jpg")
@@ -60,7 +59,7 @@ p dog1.save ? "dog1 OK" : "Problem with dog1"
 
 dog2 = Dog.new(
   name: "Ostia", breed: "Golden retriever", age: 7, size: "Grand", sexe: "Femelle",
-  energy: rand(1..3), neutered: true, user_id: user2.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: true, user: user2, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog2.photo.attach(io: file2, filename: "titi.jpg", content_type: "image/jpg")
@@ -68,7 +67,7 @@ p dog2.save ? "dog2 OK" : "Problem with dog2"
 
 dog3 = Dog.new(
   name: "Buddy", breed: "Teckel", age: 2, size: "Petit", sexe: "Femelle",
-  energy: rand(1..3), neutered: true, user_id: user3.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: true, user: user3, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog3.photo.attach(io: file3, filename: "tata.jpg", content_type: "image/jpg")
@@ -76,7 +75,7 @@ p dog3.save ? "dog3 OK" : "Problem with dog3"
 
 dog4 = Dog.new(
   name: "Ren", breed: "Berger Australien", age: 3, size: "Moyen", sexe: "Mâle",
-  energy: rand(1..3), neutered: true,  user_id: user4.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: true,  user: user4, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog4.photo.attach(io: file4, filename: "tete.jpg", content_type: "image/jpg")
@@ -84,7 +83,7 @@ p dog4.save ? "dog4 OK" : "Problem with dog4"
 
 dog5 = Dog.new(
   name: "Zak", breed: "Berger des Shetland", age: 5, size: "Grand", sexe: "Mâle",
-  energy: rand(1..3), neutered: false, user_id: user5.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user: user5, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog5.photo.attach(io: file5, filename: "tyty.jpg", content_type: "image/jpg")
@@ -92,7 +91,7 @@ p dog5.save ? "dog5 OK" : "Problem with dog5"
 
 dog6 = Dog.new(
   name: "Indra", breed: "Dalmatien", age: 1, size: "Grand", sexe: "Femelle",
-  energy: rand(1..3), neutered: false, user_id: user6.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user: user6, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog6.photo.attach(io: file6, filename: "tootoo.jpg", content_type: "image/jpg")
@@ -100,7 +99,7 @@ p dog6.save ? "dog6 OK" : "Problem with dog6"
 
 dog7 = Dog.new(
   name: "Yuna", breed: "Husky", age: 7, size: "Moyen", sexe: "Femelle",
-  energy: rand(1..3), neutered: false, user_id: user7.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user: user7, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog7.photo.attach(io: file7, filename: "teetee.jpg", content_type: "image/jpg")
@@ -108,7 +107,7 @@ p dog7.save ? "dog7 OK" : "Problem with dog7"
 
 dog8 = Dog.new(
   name: "Pirouette", breed: "Leonberg", age: 1, size: "Moyen", sexe: "Femelle",
-  energy: rand(1..3), neutered: false, user_id: user8.id, neutered_males: true, neutered_females: true,
+  energy: rand(1..3), neutered: false, user: user8, neutered_males: true, neutered_females: true,
   unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog8.photo.attach(io: file8, filename: "taataa.jpg", content_type: "image/jpg")

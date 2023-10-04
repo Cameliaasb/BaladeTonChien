@@ -1,9 +1,9 @@
 class Dog < ApplicationRecord
   belongs_to       :user
-  has_many         :tindogs, foreign_key: "sender_id" # , dependent: :destroy
+  has_many         :tindogs, foreign_key: "sender_id", dependent: :destroy
   has_one_attached :photo
 
-  validates :name, :breed, :age, :sexe, :size, :energy, :photo, presence: true
+  validates :name, :breed, :age, :sexe, :size, :energy, presence: true
 
   SIZE = ["Grand", "Moyen", "Petit"]
   validates_inclusion_of :size, in: Dog::SIZE
