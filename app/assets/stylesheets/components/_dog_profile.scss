@@ -22,10 +22,25 @@
 }
 
 .large-form-input {
-  width: 40%;
+  width: 45%;
 }
 
 
 .form-check-input:checked {
   background-color: green;
+}
+
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 4%;
+  border-radius: 8px;
+  justify-content: space-around;
+  margin-bottom: 16px;
+
+  .boolean {
+    margin-bottom: 0 !important;
+  }
 }

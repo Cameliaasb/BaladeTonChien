@@ -1,28 +1,20 @@
 <div class="app-container">
-  <div class="">
-    <div class="">
+  <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "log-out" do  %>
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+  <% end %>
 
-      <div class="dog-profile">
-        <%= link_to destroy_user_session_path, data:{turbo_method: :delete} do %>
-          <%= cl_image_tag @dog.photo.key, class:"avatar-large"%>
-        <% end %>
-        <h2> <%= @dog.name %> </h2>
-        <p><%= @dog.breed %>  </p>
-        <p><i class="fa-solid fa-venus-mars"></i>  <%= @dog.sexe %> de <%= "#{@dog.age} #{@dog.age > 1 ? "ans" : "an"}"  %> </p>
-      </div>
-
-      <div class="dog-description bg-white">
-        <%= render partial: "shared/dog_description", locals: { dog: @dog } %>
-      </div>
-
-    </div>
+  <div class="dog-profile">
+    <%= link_to destroy_user_session_path, data:{turbo_method: :delete} do %>
+      <%= cl_image_tag @dog.photo.key, class:"avatar-large"%>
+    <% end %>
+    <h2> <%= @dog.name %> </h2>
+    <p><%= @dog.breed %>  </p>
+    <p><i class="fa-solid fa-venus-mars"></i>  <%= @dog.sexe %> de <%= "#{@dog.age} #{@dog.age > 1 ? "ans" : "an"}"  %> </p>
   </div>
+
+  <div class="dog-description bg-white">
+    <%= render partial: "shared/dog_description", locals: { dog: @dog } %>
+  </div>
+
 </div>
 <%= render "shared/footer" %>
-
-
-<%# <% if user_signed_in?  %>
-      <%# <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-<%# <% else %>
-    <%# <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-<%# <% end %>

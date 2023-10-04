@@ -19,14 +19,14 @@ class DogsController < ApplicationController
     @dog = current_user.dog
   end
 
-
   private
 
   def dog_params
     # all boolean params are set to false by default
     params.require(:dog).permit(
-      :name, :breed, :age, :energy, :neutered_males, :neutered_females, :size,
-      :neutered, :sexe, :photo, :unneutered_females, :unneutered_males
+      :name, :breed, :age, :energy, :size, :neutered, :sexe, :photo,
+      :neutered_males, :neutered_females, :unneutered_females, :unneutered_males,
+      :big_dogs, :small_dogs
     )
   end
 end
