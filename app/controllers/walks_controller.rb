@@ -10,9 +10,8 @@ class WalksController < ApplicationController
     @walks = Walk.all
     @dog = current_user.dog
     # filters the map if any filters have been activated
-    filter(@walks)
-    # Inserts all walks in map
-    insert_markers(@walks)
+    # And inserts all walks in map
+    insert_markers(filter(@walks))
   end
 
   def show

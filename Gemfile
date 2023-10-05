@@ -87,3 +87,4 @@ group :test do
 end
 
 gem "geocoder"
+gem 'rails-controller-testing'

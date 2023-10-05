@@ -17,8 +17,8 @@ RSpec.describe Dog, type: :model do
   it { should validate_presence_of(:size) }
   it { should validate_presence_of(:energy) }
 
-  it "is not valid with an invalid energy value" do
-    dog = FactoryBot.build(:dog, energy: "invalid_value", sexe: "invalid", size: "invalid")
+  it "is not valid with invalid values" do
+    dog = FactoryBot.build(:dog, energy: "invalid", sexe: "invalid", size: "invalid")
     expect(dog).not_to be_valid
     expect(dog.errors[:energy]).to include("is not included in the list")
     expect(dog.errors[:sexe]).to include("is not included in the list")
