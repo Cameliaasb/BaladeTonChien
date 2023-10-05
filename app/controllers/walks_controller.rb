@@ -11,7 +11,7 @@ class WalksController < ApplicationController
     @dog = current_user.dog
     # filters the map if any filters have been activated
     # And inserts all walks in map
-    insert_markers(filter(@walks))
+    @walks = insert_markers(filter(@walks))
   end
 
   def show
@@ -34,7 +34,6 @@ class WalksController < ApplicationController
       sql_subquery = "title @@ :query OR description @@ :query OR difficulty @@ :query OR city @@ :query"
       walks = walks.where(sql_subquery, query: "%#{params[:query]}%")
     end
-
     return walks
   end
 
@@ -47,5 +46,6 @@ class WalksController < ApplicationController
         marker_html: render_to_string(partial: "marker")
       }
     end
+    return walks
   end
 end

@@ -13,7 +13,7 @@ FactoryBot.define do
     city { "Lyon" }
     distance { 1 }
     title { "Walk test" }
-    difficulty { "Facile" }
+    difficulty { "facile" }
     duration { 2 }
     description { "Walk test" }
   end
