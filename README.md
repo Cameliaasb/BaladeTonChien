@@ -9,19 +9,10 @@ It was created as part of a two-week bootcamp project, demonstrating the ability
 
 BaladeTonChien is designed to provide an optimal experience on mobile devices. / To fully appreciate the mobile-friendly features and layout, we recommend viewing the application in a mobile-like mode using your browser's developer tools.
 
-Follow these steps to simulate a mobile device view in your browser:
 
-1. **Open Browser Inspector:** Right-click anywhere on the BaladeTonChien page and select "Inspect" or "Inspect Element" from the context menu. Alternatively, you can use keyboard shortcuts like `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Option+I` (Mac) to open the inspector.
+![screenshot](app/assets/images/screenshot1.png?raw=true "App screenshot")
+![screenshot](app/assets/images/screenshot2.png?raw=true "App screenshot")
 
-2. **Toggle Device Toolbar:** In the developer tools window, locate the device toolbar icon. It typically resembles a mobile or tablet device. Click this icon to enable the device mode.
-
-3. **Select a Mobile Device:** In the device toolbar, you can choose from a list of predefined mobile device presets. Select a suitable one that matches your device's screen size or choose "Responsive" to manually adjust the viewport size.
-
-
-By following these steps, you can experience BaladeTonChien as if you were using it on a mobile device, ensuring that you get the best mobile user experience.
-
-
-Enjoy exploring BaladeTonChien with your furry friend, wherever you are! 
 
 ## Accessing BaladeTonChien
 
@@ -93,7 +84,7 @@ rspec
 
 This will execute all the tests and provide you with feedback on the status of the application's functionality.
 
----------- 
+----------
 
 ## Getting Started
 
@@ -131,6 +122,6 @@ To set up BaladeTonChien on your local machine, follow these steps:
    ```
 
 5. **Access BaladeTonChien:**
-  
+
    Open your web browser and navigate to http://localhost:3000 to access the BaladeTonChien application.\
    🐾 🐕 Now you have BaladeTonChien running locally on your machine. Enjoy exploring and using it! 🐕 🐾
