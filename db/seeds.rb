@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'json'
 
+Tindog.destroy_all
 Chatroom.destroy_all
 User.destroy_all
 Walk.destroy_all
@@ -59,8 +60,8 @@ p dog1.save ? "dog1 OK" : "Problem with dog1"
 
 dog2 = Dog.new(
   name: "Ostia", breed: "Golden retriever", age: 7, size: "Grand", sexe: "Femelle",
-  energy: rand(1..3), neutered: true, user: user2, neutered_males: true, neutered_females: true,
-  unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
+  energy: rand(1..3), neutered: false, user: user2, neutered_males: true, neutered_females: true,
+  unneutered_females: false, unneutered_males: true, small_dogs: true, big_dogs: true
 )
 dog2.photo.attach(io: file2, filename: "titi.jpg", content_type: "image/jpg")
 p dog2.save ? "dog2 OK" : "Problem with dog2"
@@ -75,8 +76,8 @@ p dog3.save ? "dog3 OK" : "Problem with dog3"
 
 dog4 = Dog.new(
   name: "Ren", breed: "Berger Australien", age: 3, size: "Moyen", sexe: "Mâle",
-  energy: rand(1..3), neutered: true,  user: user4, neutered_males: true, neutered_females: true,
-  unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
+  energy: rand(1..3), neutered: false, user: user4, neutered_males: true, neutered_females: true,
+  unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: false
 )
 dog4.photo.attach(io: file4, filename: "tete.jpg", content_type: "image/jpg")
 p dog4.save ? "dog4 OK" : "Problem with dog4"
@@ -84,7 +85,7 @@ p dog4.save ? "dog4 OK" : "Problem with dog4"
 dog5 = Dog.new(
   name: "Zak", breed: "Berger des Shetland", age: 5, size: "Grand", sexe: "Mâle",
   energy: rand(1..3), neutered: false, user: user5, neutered_males: true, neutered_females: true,
-  unneutered_females: true, unneutered_males: true, small_dogs: true, big_dogs: true
+  unneutered_females: true, unneutered_males: true, small_dogs: false, big_dogs: true
 )
 dog5.photo.attach(io: file5, filename: "tyty.jpg", content_type: "image/jpg")
 p dog5.save ? "dog5 OK" : "Problem with dog5"
