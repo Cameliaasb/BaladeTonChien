@@ -14,17 +14,6 @@ BaladeTonChien is designed to provide an optimal experience on mobile devices. /
 ![screenshot](app/assets/images/screenshot2.png?raw=true "App screenshot")
 
 
-## Accessing BaladeTonChien
-
-You can access BaladeTonChien using the following [URL](https://balade-ton-chien-df0ea100d8e5.herokuapp.com/).
-
-### Demo Account
-
-To explore the application and its features, you can use the following demo account credentials:
-
-- **email:** test@gmail.com
-- **Password:** azerty
-
 
 ## Features
 
