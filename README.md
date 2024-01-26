@@ -1,6 +1,6 @@
 # BaladeTonChien 🐾🚶‍♀️🐕🚶‍♂️🐾
 
-BaladeTonChien is a Progressive Web App (PWA) built with Ruby on Rails designed to make it easy for dog owners to discover nearby dog walks and connect with other dog owners for group walks. With a user-friendly interface and location-based features, BaladeTonChien is the perfect companion for your furry friend's outdoor adventures.
+BaladeTonChien is an application built with Ruby on Rails designed to make it easy for dog owners to discover nearby dog walks and connect with other dog owners for group walks. 
 
 It was created as part of a two-week bootcamp project, demonstrating the ability to develop a functional application within a limited timeframe. All walks available are within the Lyon region and are sourced from the [Grand Lyon API](https://data.grandlyon.com/portail/fr/jeux-de-donnees/boucles-randonnee-metropole-lyon/api).
 
